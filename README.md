@@ -1,26 +1,26 @@
-Django Handler Images
-=====================
-Application handler Images for django projects.
+Django Image Manager
+====================
+Application manager images for django projects.
 
 
 Installation:
 -----------------------------
 
-1. ``pip install git+git://github.com/CharlesGarrocho/django-handler-images``
+1. ``pip install git+git://github.com/CharlesGarrocho/django-image-manager``
 
 Configuration:
 -----------------------------
 
-2. Add ``handler_images`` to your ``INSTALLED_APPS``
+2. Add ``image_manager`` to your ``INSTALLED_APPS``
 
 Usage:
 -----------------------------
 
-3. Include url ``handler_images`` to your ``urls.py`` in your app:
+3. Include url ``image_manager`` to your ``urls.py`` in your app:
 
 ```py           
   urlpatterns = patterns('project_name',
-    url(r'^handler_images/', include('handler_images.urls')),
+    url(r'^image_manager/', include('image_manager.urls')),
   )
 ```
 

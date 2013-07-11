@@ -4,7 +4,7 @@ from distutils.util import convert_path
 from fnmatch import fnmatchcase
 from setuptools import setup, find_packages
 
-version = '0.0.2'
+version = '0.0.3'
 
 standard_exclude = ('*.py', '*.pyc', '*$py.class', '*~', '.*', '*.bak')
 standard_exclude_directories = ('.*', 'CVS', '_darcs', './build',
@@ -65,17 +65,17 @@ def find_package_data(
 
 
 LONG_DESCRIPTION = """
-=====================
-django-handler-images
-=====================
+====================
+django-image-manager
+====================
 
-This is a Django-powered handler images for django project.
+This is a Django-powered manager image for django project.
 """
 
 setup(
-    name='django-handler-images',
+    name='django-image-manager',
     version=version,
-    description="Django-powered handler image tool",
+    description="Django-powered manager image tool",
     long_description=LONG_DESCRIPTION,
     classifiers=[
         "Programming Language :: Python",
@@ -86,13 +86,13 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Natural Language :: Portuguese",
     ],
-    keywords=['django', 'handler', 'images'],
+    keywords=['django', 'manager', 'image'],
     author='Charles Garrocho',
     author_email='charles.garrocho@gmail.com',
-    url='https://github.com/CharlesGarrocho/django-handler-images',
+    url='https://github.com/CharlesGarrocho/django-image-manager',
     license='BSD',
     packages=find_packages(),
-    package_data=find_package_data("handler_images", only_in_packages=False),
+    package_data=find_package_data("image_manager", only_in_packages=False),
     include_package_data=True,
     zip_safe=False,
     install_requires=['setuptools'],

@@ -4,7 +4,7 @@ from distutils.util import convert_path
 from fnmatch import fnmatchcase
 from setuptools import setup, find_packages
 
-version = '0.0.1'
+version = '0.0.2'
 
 standard_exclude = ('*.py', '*.pyc', '*$py.class', '*~', '.*', '*.bak')
 standard_exclude_directories = ('.*', 'CVS', '_darcs', './build',
@@ -86,13 +86,13 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Natural Language :: Portuguese",
     ],
-    keywords=['django', 'pages', 'search'],
+    keywords=['django', 'handler', 'images'],
     author='Charles Garrocho',
     author_email='charles.garrocho@gmail.com',
     url='https://github.com/CharlesGarrocho/django-handler-images',
     license='BSD',
     packages=find_packages(),
-    package_data=find_package_data("page_search", only_in_packages=False),
+    package_data=find_package_data("handler_images", only_in_packages=False),
     include_package_data=True,
     zip_safe=False,
     install_requires=['setuptools'],

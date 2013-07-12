@@ -25,7 +25,7 @@ def load(request):
         if image is not None:
             mimetype, encoding = mimetypes.guess_type(image)
             response = HttpResponse(mimetype=mimetype)
-            response['Content-Disposition'] = 'attachment; filename=%s' % name
+            response['Content-Disposition'] = 'attachment; filename=%s' % parameters['name']
             response.write(image)
             response.status_code = 200
     return response

@@ -8,12 +8,10 @@ import mimetypes
 
 def add(request):
     response, parameters = validate_request(request)
-
     if response.status_code == 204:
-        if manager.delete(parameters['address'], parameters['name']):
-            if 'file' in request.FILES:
-                if manager.add(image, address, name):
-                    response.status_code = 200
+        if 'file' in request.FILES:
+            if manager.add(request.FILES['file'], parameters['address'], parameters['name']):
+                response.status_code = 200
     return response
 
 

@@ -1,4 +1,12 @@
-#coding: utf-8
+# -*- coding: utf-8 -*-
+# @author: Charles Tim Batista Garrocho
+# @contact: charles.garrocho@gmail.com
+# @copyright: (C) 2013 Python Software Open Source
+
+"""
+This is the module of the application views.
+"""
+
 from django.http import HttpResponse
 from django.utils import simplejson
 from django.conf import settings

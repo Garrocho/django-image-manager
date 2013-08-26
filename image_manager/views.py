@@ -15,6 +15,9 @@ import mimetypes
 
 
 def add(request):
+    '''
+    records an image in the folder of the address passed as argument.
+    '''
     response, parameters = validate_request(request)
     if response.status_code == 204:
         if 'file' in request.FILES:
@@ -24,6 +27,9 @@ def add(request):
 
 
 def load(request):
+    '''
+    loads an image from the folder name and the address passed as argument.
+    '''
     response, parameters = validate_request(request)
 
     if response.status_code == 204:
@@ -38,6 +44,9 @@ def load(request):
 
 
 def list(request):
+    '''
+    several images in the folder list of the address and the name passed as argument.
+    '''
     response, parameters = validate_request(request)
 
     if response.status_code == 204:
@@ -50,6 +59,9 @@ def list(request):
 
 
 def delete(request):
+    '''
+    delete an image from the folder address and name passed as argument.
+    '''
     response, parameters = validate_request(request)
 
     if response.status_code == 204:
@@ -59,6 +71,9 @@ def delete(request):
 
 
 def validate_request(request):
+    '''
+    validates the parameters passed by post or get method.
+    '''
     response = HttpResponse()
     response.status_code = 204
     parameters = None

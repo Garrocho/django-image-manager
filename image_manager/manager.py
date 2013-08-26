@@ -14,8 +14,7 @@ import os
 
 def add(image, address, name):
     '''
-    calls the methods of the package manager (records an image)
-    and returns True or False to the end of the process.
+    records an image in the folder of the address passed as argument.
     '''
     try:
         path_dir = settings.MEDIA_IMAGES + address
@@ -40,8 +39,7 @@ def add(image, address, name):
 
 def load(address, name):
     '''
-    calls the methods of the package manager (loads an image)
-    and returns File or None to the end of the process.
+    loads an image from the folder name and the address passed as argument.
     '''
     path_image = settings.MEDIA_IMAGES + address + '/' + name
     if os.path.isfile(path_image):
@@ -52,8 +50,7 @@ def load(address, name):
 
 def list(address, name):
     '''
-    calls the methods of the package manager (several images in the folder list)
-    and returns List Names Images to the end of the process.
+    several images in the folder list of the address and the name passed as argument.
     '''
     path_image = settings.MEDIA_IMAGES + address + '/' + name
     images = glob.glob(path_image + '*')
@@ -65,8 +62,7 @@ def list(address, name):
 
 def delete(address, name):
     '''
-    calls the methods of the package manager (delete an image)
-    and returns File or None to the end of the process.
+    delete an image from the folder address and name passed as argument.
     '''
     path_image = settings.MEDIA_IMAGES + address + '/' + name
     if os.path.isfile(path_image):

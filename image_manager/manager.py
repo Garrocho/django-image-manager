@@ -13,6 +13,10 @@ import os
 
 
 def add(image, address, name):
+    '''
+    calls the methods of the package manager (records an image)
+    and returns True or False to the end of the process.
+    '''
     try:
         path_dir = settings.MEDIA_IMAGES + address
         image_name, image_type = name.split('.')
@@ -35,6 +39,10 @@ def add(image, address, name):
 
 
 def load(address, name):
+    '''
+    calls the methods of the package manager (loads an image)
+    and returns File or None to the end of the process.
+    '''
     path_image = settings.MEDIA_IMAGES + address + '/' + name
     if os.path.isfile(path_image):
     	return file(path_image, 'rb').read()
@@ -43,6 +51,10 @@ def load(address, name):
 
 
 def list(address, name):
+    '''
+    calls the methods of the package manager (several images in the folder list)
+    and returns List Names Images to the end of the process.
+    '''
     path_image = settings.MEDIA_IMAGES + address + '/' + name
     images = glob.glob(path_image + '*')
     list_images = []
@@ -52,6 +64,10 @@ def list(address, name):
 
 
 def delete(address, name):
+    '''
+    calls the methods of the package manager (delete an image)
+    and returns File or None to the end of the process.
+    '''
     path_image = settings.MEDIA_IMAGES + address + '/' + name
     if os.path.isfile(path_image):
         os.remove(path_image)

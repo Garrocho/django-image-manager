@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+# @author: Charles Tim Batista Garrocho
+# @contact: charles.garrocho@gmail.com
+# @copyright: (C) 2013 Python Software Open Source
+
+"""
+This is the module urls for navigation in the application.
+"""
+
 from django.conf.urls import patterns, url
 
 urlpatterns = patterns('image_manager',
